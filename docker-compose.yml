@@ -4,4 +4,4 @@ services:
     restart: unless-stopped
     environment:
       - NOTION_API_KEY=dein_notion_api_key_hier
-    command: ["notion-mcp-server", "--stdio"]
+    command: ["notion-mcp-server"]
