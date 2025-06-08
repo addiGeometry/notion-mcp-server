@@ -1,10 +1,7 @@
 services:
   notion-mcp-server:
     build: .
-    stdin_open: true
-    tty: true
     restart: unless-stopped
     environment:
-      - NOTION_API_KEY=${NOTION_API_KEY}  # Setze das in Dokploy
-      # Eventuell weitere Vars
-    command: ["notion-mcp-server"]  # Expliziter Start-Command
+      - NOTION_API_KEY=dein_notion_api_key_hier
+    command: ["notion-mcp-server", "--stdio"]
